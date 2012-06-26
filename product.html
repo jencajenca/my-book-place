@@ -11,10 +11,14 @@
 				song.play();
 			}); 
 			
-			function pause() {
-				$('#className')
+			function togglePause() {
 				var song = document.getElementById("b");
-				song.pause();
+				if (song.paused) {
+					song.play();
+					}
+				else {
+					song.pause();
+				}
 			}
 		</SCRIPT>
 	</HEAD>
@@ -23,6 +27,6 @@
 			<source src="song.ogg" type="audio/ogg" />
 			Your browser does not support the audio element.
 		</audio>
-		<button onclick="pause">Pausknapp</button>
+		<button onclick="togglePause()">Pausknapp</button>
 	</BODY>
 </HTML>
